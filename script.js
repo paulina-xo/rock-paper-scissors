@@ -74,7 +74,33 @@ function playRound(humanChoice, computerChoice) {
         }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+function playGame() {
+
+    let games = 0;
+    while (games < 5)
+        {
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+            games += 1;
+        }
+
+    console.log("Final Scores:");
+    console.log("Human: " + humanScore);
+    console.log("Computer: " + computerScore);
+    
+    if (computerScore > humanScore)
+        {
+            console.log("You lost!");
+        }
+
+    else if (computerScore < humanScore)
+        {
+            console.log("You won!");
+        }
+    
+    else { console.log("It's a tie!")}
+}
+
+playGame();
