@@ -103,4 +103,4 @@ function playGame() {
     else { console.log("It's a tie!")}
 }
 
-playGame();
+document.getElementById("startGameButton").addEventListener("click", playGame);
