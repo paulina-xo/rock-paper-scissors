@@ -8,4 +8,15 @@ function getComputerChoice() {
     if (num === 2) { return "scissors"; }
 }
 
-console.log(getComputerChoice())
+function getHumanChoice() {
+
+    let loop = true;
+
+    while(loop) {
+    let choice = window.prompt("Rock, paper or scissors? ")
+    if (choice === "rock" || choice === "paper" || choice === "scissors") {
+            return choice;
+        }
+        window.alert("Invalid choice. Try again.")
+    }
+}
