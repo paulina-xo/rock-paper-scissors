@@ -2,10 +2,145 @@
 
 * {
     font-family: "SF Pro Display";
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
     background-color: #0c0c0c;
     color: #f3f3f2;
+    text-align: center;
+    max-width: 900px;
+}
+
+#container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#scores {
+    border: 1px;
+    background-color: #171717;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    flex: 2;
+    height: max-content;
+}
+
+#scores p {
+    text-align: left;
+    font-weight: bold;
+}
+
+#scores h4 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2f2f2f;
+    text-align: left;
+}
+
+#yourChoice {
+    border: 1px;
+    background-color: #171717;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    flex: 3;
+}
+
+#yourChoice h4 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2f2f2f;
+    text-align: left;
+}
+
+#yourChoice button {
+    padding: 5px 10px;
+    margin: 20px 5px 5px 5px;
+    background-color: #171717;
+    color: #f3f3f2;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#yourChoice button:hover {
+    border: 2px solid palevioletred;
+}
+
+#compChoice {
+    border: 1px solid #171717;
+    background-color: #171717;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    flex: 3;
+}
+
+#compChoice h4 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2f2f2f;
+    text-align: left;
+}
+
+#compChoice button {
+    padding: 5px 10px;
+    margin: 20px 5px 0px 5px;
+    background-color: #171717;
+    color: #f3f3f2;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid palevioletred;
+}
+
+#history {
+    border: 1px solid #171717;
+    background-color: #171717;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#history h4 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2f2f2f;
+    text-align: left;
+}
+
+.round {
+    text-align: left;
+    border: 3px solid #2f2f2f;
+    border-radius: 15px;
+    padding: 10px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.round:hover {
+    border: 3px solid palevioletred;
+}
+
+.round h5 {
+    font-size: 18px;
+    color: palevioletred;
+}
+
+.winner {
+    color: greenyellow;
+    font-weight: bold;
+}
+
+#roundsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
