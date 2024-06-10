@@ -103,4 +103,34 @@ function playGame() {
     else { console.log("It's a tie!")}
 }
 
-document.getElementById("startGameButton").addEventListener("click", playGame);
+document.getElementById("startGameButton").addEventListener("click", startGame);
+
+function startGame() {
+
+    const game = document.getElementById("game");
+
+    // CREATE TEXT in #GAME
+
+        const greeting = document.createElement('h4');
+        greeting.textContent = "Choose: ";
+        game.appendChild(greeting);
+
+
+    // CREATE BUTTONS IN #GAME
+
+        // create a rock button
+        const rock = document.createElement('button');
+        rock.textContent = "Rock";
+        game.appendChild(rock);
+
+        // create a paper button
+        const paper = document.createElement('button');
+        paper.textContent = "Paper";
+        game.appendChild(paper);
+
+        // create a scissors button
+        const scissors = document.createElement('button');
+        scissors.textContent = "Scissors";
+        game.appendChild(scissors);
+    
+}
