@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors Game</h1>
-    <button id="startGameButton">Start Game</button>
+    <div id="greeting">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <h4>First one to get 5 points wins. Good luck!</h4>
+    </div>
+    
+    <div id="container">
+
+        <div id="yourChoice">
+            <h4>YOUR CHOICE</h4>
+            <button id="rock"> ROCK </button>
+            <button id="paper"> PAPER </button>
+            <button id="scissors"> SCISSORS </button>
+        </div>
+
+        <div id="scores">
+            
+        </div>
+    
+        <div id="compChoice">
+            <h4>COMPUTER'S CHOICE</h4>
+            <button id="computerChoice"><em> . . . </em></button>
+        </div>
+        
+    </div>
+
+    <div id="again">
+        <button id="tryagain" onclick="location.reload()">LET'S GO WIN AGAIN!</button>
+        <button id="nexttime" onclick="location.reload()">BETTER LUCK NEXT TIME!</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

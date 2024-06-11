@@ -2,19 +2,191 @@
 
 * {
     font-family: "SF Pro Display";
+    margin: 0;
+    padding: 0;
+    
 }
 
 body {
-    margin: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
     background-color: #0c0c0c;
     color: #f3f3f2;
+    text-align: center;
+    max-width: 1000px;
+    box-sizing: border-box;
 }
 
-#game {
-    border: 1px solid #f3f3f2;
+#container {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#scores {
+    border: 3px solid #0c0c0c;
+    border-radius: 15px;
     margin-top: 20px;
     padding: 20px;
+    flex: 1;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: max-content;
+    align-self: center;
+    min-width: 250px;
+}
+
+
+#scores h4 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2f2f2f;
+    text-align: left;
+}
+
+#scores p {
+    font-weight: bold;
+}
+
+#score {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+#yourChoice {
+    border: 3px solid greenyellow;
+    background-color: #171717;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    flex: 1;
+    height: max-content;
+    min-width: 250px;
+}
+
+#yourChoice h4 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2f2f2f;
+    text-align: left;
+}
+
+#yourChoice button {
+    padding: 5px 10px;
+    margin: 20px 5px 5px 5px;
+    background-color: #171717;
+    color: #f3f3f2;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#yourChoice button:hover {
+    border: 2px solid greenyellow;
+}
+
+#compChoice {
+    border: 3px solid paleturquoise;
+    background-color: #171717;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    flex: 1;
+    height: max-content;
+    min-width: 250px;
+}
+
+#compChoice h4 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2f2f2f;
+    text-align: left;
+}
+
+#compChoice button {
+    padding: 5px 10px;
+    margin: 20px 5px 0px 5px;
+    background-color: #171717;
+    color: #f3f3f2;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid paleturquoise;
+}
+
+#history {
+    border: 3px solid #171717;
+    background-color: #171717;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#history h4 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2f2f2f;
+    text-align: left;
+}
+
+.round {
+    text-align: left;
+    border: 3px solid #2f2f2f;
+    border-radius: 15px;
+    padding: 10px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.round:hover {
+    border: 3px solid palevioletred;
+}
+
+.round h5 {
+    font-size: 18px;
+    color: palevioletred;
+}
+
+.winner {
+    color: greenyellow;
+    font-weight: bold;
+}
+
+#roundsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#again {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#again button {
+    padding: 5px 10px;
+    margin: 10px 5px 0px 5px;
+    background-color: #171717;
+    color: #f3f3f2;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#again button:hover {
+    border: 2px solid white;
+}
+
+#tryagain {
+    display: none;
+}
+
+#nexttime {
+    display: none;
 }
