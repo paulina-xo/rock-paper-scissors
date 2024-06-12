@@ -1,17 +1,17 @@
 let humanScore = 0;
 let computerScore = 0;
 
-// SET THE SCORE (DEFAULT AT 0 obviously)
+// SCORE : SCORE
 const containerScore = document.getElementById("scores");
 const currentScore = document.createElement("p");
 currentScore.id = "score";
 containerScore.appendChild(currentScore);
 
-// CREATE THE CHOICE vs CHOICE
+// CHOICE vs CHOICE
 const choices = document.createElement("p");
 containerScore.appendChild(choices);
 
-//CREATE WINNER/LOSER
+// YOU WIN / YOU LOSE
 const winner = document.createElement("p");
 containerScore.appendChild(winner);
 
@@ -21,7 +21,7 @@ function main() {
     const paperButton = document.getElementById("paper");
     const scissorsButton = document.getElementById("scissors");
 
-    // Add event listeners to buttons
+    // EVEN LISTENERS FOR BUTTONS
     rockButton.addEventListener("click", function() {
         choseRock();
     });
@@ -34,6 +34,7 @@ function main() {
         choseScissors();
     });
 
+    // UPDATES THE SCORE AFTER EACH ROUND
     currentScore.textContent = `${humanScore} : ${computerScore}`;
 
 }
@@ -53,8 +54,8 @@ function choseRock() {
     const humanChoice = "rock";
     const computerChoice = getComputerChoice();
 
-    // CLEAR CONTAINER
-    containerScore.innerHTML = "";
+    // CLEAR SCORE CONTAINER EACH ROUND
+    containerScore.textContent = "";
 
     // REDO SCORE & CHOICES
     choices.textContent = `${humanChoice.toUpperCase()} vs ${computerChoice.toUpperCase()}`;
@@ -62,33 +63,36 @@ function choseRock() {
     containerScore.appendChild(choices);
     choices.style.color = "white";
     
-
+    // ROUND
     if  (humanChoice === computerChoice) {
 
         winner.textContent = "It's a tie!";
-        winner.style.color = "orange";
+        winner.style.color = "#fde74c";
         containerScore.appendChild(winner);
 
     } else if (computerChoice === "paper") {
 
         winner.textContent = "You lose! Paper beats rock!";
-        winner.style.color = "red";
+        winner.style.color = "#e55934";
         containerScore.appendChild(winner);
 
         computerScore += 1;
 
-    } else {
+    } else if (computerChoice === "scissors") {
 
         winner.textContent = "You win! Rock beats scissors!";
-        winner.style.color = "green";
+        winner.style.color = "#9bc53d";
         containerScore.appendChild(winner);
 
         humanScore += 1;
 
     }
 
+    // PUTS THE COMPUTER CHOICE IN THE BUTTON
     const compChoice = document.getElementById("computerChoice");
     compChoice.textContent = `${computerChoice}`.toUpperCase();
+
+    //UPDATE THE SCORE
     currentScore.textContent = `${humanScore} : ${computerScore}`;
 
     checkWins();
@@ -99,8 +103,8 @@ function chosePaper() {
     const humanChoice = "paper";
     const computerChoice = getComputerChoice();
 
-    // CLEAR CONTAINER
-    containerScore.innerHTML = "";
+    // CLEAR SCORE CONTAINER EACH ROUND
+    containerScore.textContent = "";
 
     // REDO SCORE & CHOICES
     choices.textContent = `${humanChoice.toUpperCase()} vs ${computerChoice.toUpperCase()}`;
@@ -108,33 +112,36 @@ function chosePaper() {
     containerScore.appendChild(choices);
     choices.style.color = "white";
     
-
+    // ROUND
     if  (humanChoice === computerChoice) {
 
         winner.textContent = "It's a tie!";
-        winner.style.color = "orange";
+        winner.style.color = "#fde74c";
         containerScore.appendChild(winner);
 
     } else if (computerChoice === "rock") {
 
         winner.textContent = "You win! Paper beats rock!";
-        winner.style.color = "lightgreen";
+        winner.style.color = "#9bc53d";
         containerScore.appendChild(winner);
 
         humanScore += 1;
 
-    } else {
+    } else if (computerChoice === "scissors") {
 
         winner.textContent = "You lose! Scissors beat paper!";
-        winner.style.color = "lightred";
+        winner.style.color = "#e55934";
         containerScore.appendChild(winner);
 
         computerScore += 1;
 
     }
 
+    // PUTS THE COMPUTER CHOICE IN THE BUTTON
     const compChoice = document.getElementById("computerChoice");
     compChoice.textContent = `${computerChoice}`.toUpperCase();
+
+    //UPDATE THE SCORE
     currentScore.textContent = `${humanScore} : ${computerScore}`;
 
     checkWins();
@@ -145,7 +152,7 @@ function choseScissors() {
     const humanChoice = "scissors";
     const computerChoice = getComputerChoice();
 
-    // CLEAR CONTAINER
+    // CLEAR SCORE CONTAINER EACH ROUND
     containerScore.innerHTML = "";
 
     // REDO SCORE & CHOICES
@@ -154,33 +161,36 @@ function choseScissors() {
     containerScore.appendChild(choices);
     choices.style.color = "white";
     
-
+    // ROUND
     if  (humanChoice === computerChoice) {
 
         winner.textContent = "It's a tie!";
-        winner.style.color = "orange";
+        winner.style.color = "#fde74c";
         containerScore.appendChild(winner);
 
     } else if (computerChoice === "paper") {
 
         winner.textContent = "You win! Scissors beat paper!";
-        winner.style.color = "lightgreen";
+        winner.style.color = "#9bc53d";
         containerScore.appendChild(winner);
 
         humanScore += 1;
 
-    } else {
+    } else if (computerChoice === "rock") {
 
         winner.textContent = "You lose! Rock beats scissors!";
-        winner.style.color = "lightred";
+        winner.style.color = "#e55934";
         containerScore.appendChild(winner);
 
         computerScore += 1;
 
     }
 
+    // PUTS THE COMPUTER CHOICE IN THE BUTTON
     const compChoice = document.getElementById("computerChoice");
     compChoice.textContent = `${computerChoice}`.toUpperCase();
+
+    //UPDATE THE SCORE
     currentScore.textContent = `${humanScore} : ${computerScore}`;
 
     checkWins();
